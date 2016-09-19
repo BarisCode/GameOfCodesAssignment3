@@ -98,6 +98,14 @@ public class MemberTest {
         assertEquals(expResult, result);
     }
     
+    @Test
+    public void testGetID() {
+        Member instance = null;
+        int expResult = 0;
+        int result = instance.getID();
+        assertEquals(expResult, result);
+    }
+    
     
     @After
     public void tearDown() {
