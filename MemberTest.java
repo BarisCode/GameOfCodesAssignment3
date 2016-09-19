@@ -82,6 +82,14 @@ public class MemberTest {
         assertEquals(expResult, result);
     }
     
+    @Test
+    public void testGetContactPhone() {
+        Member instance = null;
+        String expResult = "";
+        String result = instance.getContactPhone();
+        assertEquals(expResult, result);
+    }
+    
     
     @After
     public void tearDown() {
