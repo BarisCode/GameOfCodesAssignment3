@@ -65,11 +65,20 @@ public class MemberTest {
         System.out.println(member.getState());
         assertEquals(String.valueOf(expResult), String.valueOf(result));
     }
+    
     @Test
     public void testGetFirstName() {
         Member instance = null;
         String expResult = "";
         String result = instance.getFirstName();
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testGetLastName() {
+        Member instance = null;
+        String expResult = "";
+        String result = instance.getLastName();
         assertEquals(expResult, result);
     }
     
