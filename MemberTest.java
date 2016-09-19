@@ -90,6 +90,14 @@ public class MemberTest {
         assertEquals(expResult, result);
     }
     
+    @Test
+    public void testGetEmailAddress() {
+        Member instance = null;
+        String expResult = "";
+        String result = instance.getEmailAddress();
+        assertEquals(expResult, result);
+    }
+    
     
     @After
     public void tearDown() {
