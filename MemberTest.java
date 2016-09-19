@@ -50,12 +50,23 @@ public class MemberTest {
         
         instance = new Loan(book, member, borrowDate, returnDate);
     }
+    
     @Test
     public void testGetMember(){
         IMember expectedResult = member;
         IMember result = instance.getBorrower();
         assertEquals(expectedResult, result);
     }
+    
+    @Test
+    public void testGetState() { // output should be BORROWING_ALLOWED as it is a default in constructor for new object
+        String expResult = "BORROWING_ALLOWED";
+        EMemberState result = member.getState();
+        System.out.println(member.getState());
+        assertEquals(String.valueOf(expResult), String.valueOf(result));
+    }
+    
+    
     
     @After
     public void tearDown() {
