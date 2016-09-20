@@ -114,6 +114,14 @@ public class MemberTest {
         assertEquals(expResult, result);
     }
     
+    @Test
+    public void testHasOverDueLoans() {
+        Member instance = null;
+        boolean expResult = false;
+        boolean result = instance.hasOverDueLoans();
+        assertEquals(expResult, result);
+    }
+    
     @After
     public void tearDown() {
     }
