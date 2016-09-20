@@ -5,6 +5,7 @@
  */
 package library.entities;
 
+import java.util.Calendar;
 import java.util.Date;
 import library.interfaces.entities.ELoanState;
 import library.interfaces.entities.IBook;
@@ -29,7 +30,7 @@ public class CheckOverDueTest {
         book = new Book("Author1","ITC515","0055455",12345);
         member = new Member("James", "Mack", "046977777", "email1", 123);
         borrowDate = new Date(2016,05,10);
-        returnDate = new Date(2016, 07, 10);
+        returnDate = new Date(2016, 30, 11);
         
         instance = new Loan(book, member, borrowDate, returnDate);
     }
@@ -39,7 +40,12 @@ public class CheckOverDueTest {
     //
     @Test
     public void testCheckOverDue() {
-        ELoanState expectedResult = ELoanState.PENDING;
+        boolean expectedResult = false;
         
+     //   Calendar current = Calendar.getInstance();
+        System.out.println(" Sate is  "+instance.getState());
+     //   boolean result = instance.checkOverDue((Date)current.getTime());
+      //  System.out.println("  "+current.getTime());
+      //  assertEquals(expectedResult, result);
     }
 }
