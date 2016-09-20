@@ -107,14 +107,6 @@ public class MemberTest {
     }
     
     @Test
-    public void testToString() {
-        Member instance = null;
-        String expResult = "";
-        String result = instance.toString();
-        assertEquals(expResult, result);
-    }
-    
-    @Test
     public void testHasOverDueLoans() {
         Member instance = null;
         boolean expResult = false;
