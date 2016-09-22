@@ -22,11 +22,13 @@ public class GetStateTest {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     
+    // Declared the required instances.
     Loan instance;
     IBook book;
     IMember member;
     Date borrowDate, returnDate;
     
+    // Created the required objects. 
     @Before
     public void setUp(){
         book = new Book("Author1","ITC515","0055455",12345);
@@ -37,6 +39,7 @@ public class GetStateTest {
         instance = new Loan(book, member, borrowDate, returnDate);
     }
     
+    // Test if get the correct state of the loan object which as a PENDING by default.
     @Test
     public void testGetState() {      
         ELoanState expResult = ELoanState.PENDING;
