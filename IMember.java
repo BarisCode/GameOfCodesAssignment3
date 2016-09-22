@@ -29,7 +29,7 @@ public interface IMember {
 	
 	public void removeLoan(ILoan loan); // interface method to remove a loan of a member
 	
-	public EMemberState getState();
+	public EMemberState getState(); // interface method to get the borrowing state of a member
 	
 	public String  getFirstName();
 	
