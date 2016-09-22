@@ -38,7 +38,7 @@ public class MemberTest {
     
     @Before
     public void setUp() {
-        book = new Book("Author1","ITC515","0055455",12345);
+        book = new Book("Author1","ITC515","0055455",12345); // creating a book object
         member = new Member("James", "Mack", "046977777", "email1", 123);
         borrowDate = new Date(2016,05,10);
         returnDate = new Date(2016, 07, 10);
