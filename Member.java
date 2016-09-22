@@ -138,7 +138,7 @@ public class Member implements IMember {
 
 	
 	@Override
-	public String getContactPhone() {
+	public String getContactPhone() { // retrieve the phone number of a member
 		return contactPhone;
 	}
 
