@@ -23,7 +23,7 @@ public interface IMember {
 
 	public void    payFine(float payment); // interface method to allow a member to pay fine corresponding
 	
-	public void    addLoan(ILoan loan);
+	public void    addLoan(ILoan loan); // interface method to add a new book loan by a member
 	
 	public List<ILoan> getLoans();
 	
