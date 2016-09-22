@@ -78,7 +78,7 @@ public class Member implements IMember {
 	}
 
 	@Override
-	public void addFine(float fine) {
+	public void addFine(float fine) { // add a fine for a member
 		if (fine < 0) {
 			throw new RuntimeException(String.format("Member: addFine : fine cannot be negative"));
 		}
