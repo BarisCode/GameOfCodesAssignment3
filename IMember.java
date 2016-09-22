@@ -15,7 +15,7 @@ public interface IMember {
 	
 	public boolean hasFinesPayable(); // interace method to check if there are fines that a member can pay
 	
-	public boolean hasReachedFineLimit();
+	public boolean hasReachedFineLimit(); // interace method to check if a member has reached the fine limit
 	
 	public float   getFineAmount();
 	
