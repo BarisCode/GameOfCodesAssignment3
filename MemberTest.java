@@ -27,15 +27,6 @@ public class MemberTest {
     public MemberTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-        
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
     @Before
     public void setUp() {
         book = new Book("Author1","ITC515","0055455",12345); // creating a book object
@@ -135,6 +126,15 @@ public class MemberTest {
     
     @After
     public void tearDown() {
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+        
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
     }
 
     
