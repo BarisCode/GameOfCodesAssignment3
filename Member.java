@@ -61,7 +61,7 @@ public class Member implements IMember {
 	}
 
 	@Override
-	public boolean hasFinesPayable() {
+	public boolean hasFinesPayable() { // check if a member has some fines that can be paid
 		boolean b = totalFines > 0.0f;
 		return b;
 	}
