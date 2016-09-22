@@ -25,7 +25,7 @@ public interface IMember {
 	
 	public void    addLoan(ILoan loan); // interface method to add a new book loan by a member
 	
-	public List<ILoan> getLoans();
+	public List<ILoan> getLoans(); // interface method to get the list of loans
 	
 	public void    removeLoan(ILoan loan);
 	
