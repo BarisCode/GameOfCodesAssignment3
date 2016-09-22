@@ -31,7 +31,7 @@ public interface IMember {
 	
 	public EMemberState getState(); // interface method to get the borrowing state of a member
 	
-	public String  getFirstName();
+	public String  getFirstName(); // interface method to get the first name of a customer
 	
 	public String  getLastName();
 	
