@@ -99,10 +99,9 @@ public class MemberTest {
     
     @Test
     public void testHasOverDueLoans() { // test if correct amount is obtained from testHasOverDueLoans method
-        Member instance = null;
-        boolean expResult = false;
-        boolean result = instance.hasOverDueLoans();
-        assertEquals(expResult, result);
+        List<ILoan> list;
+        Loan loan = new Loan(book, member, borrowDate, returnDate);
+        assertFalse(member.hasOverDueLoans());
     }
     
     @Test
