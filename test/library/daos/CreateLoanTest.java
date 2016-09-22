@@ -23,11 +23,13 @@ import static org.junit.Assert.*;
  */
 public class CreateLoanTest {
     
+    // Create the references.
     IMember member;
     IBook book;
     ILoan iLoan;
     ILoanDAO loanDAO;
     
+    // Set up the book and member object.
     @Before
     public void setUp() {
         book = new Book("Author1","ITC515","0055455",12345);
@@ -36,7 +38,8 @@ public class CreateLoanTest {
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
-    //
+    
+    // Test the createLoan() that create loan for perticular member and book.
     @Test
     public void testCreateLoan() {
     
