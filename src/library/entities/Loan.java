@@ -91,10 +91,11 @@ public class Loan implements ILoan
             return (state == ELoanState.OVERDUE);
 	}
 
+	// Check the loan is over due.
 	@Override
 	public boolean checkOverDue(Date currentDate) 
         {
-            if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE )) 
+            if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE )) // Incorrect transition.
             {
 		throw new RuntimeException(String.format("Loan : checkOverDue : incorrect state transition  : %s -> %s\n",
 							state, ELoanState.OVERDUE));
@@ -105,7 +106,7 @@ public class Loan implements ILoan
 		state = ELoanState.OVERDUE;
             }
             
-            return isOverDue();
+            return isOverDue(); // call the isOverDue method.
 	}
 
 	@Override
