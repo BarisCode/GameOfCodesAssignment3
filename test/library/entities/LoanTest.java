@@ -20,5 +20,4 @@ public class LoanTest {
     @Before
     public void setUp() throws Exception {
     }
-    
 }
