@@ -16,7 +16,7 @@ public class Member implements IMember {
 	private final String emailAddress;
 	private final int id;
 	
-	private EMemberState state;
+	private EMemberState state; 
 	private List<ILoan> loanList;
 	private float totalFines;
 	
