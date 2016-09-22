@@ -84,6 +84,7 @@ public class Loan implements ILoan
             state = ELoanState.COMPLETE;	// Assign complete state.		
 	}
 
+	// Return true if loan is over due.
 	@Override
 	public boolean isOverDue() 
         {
