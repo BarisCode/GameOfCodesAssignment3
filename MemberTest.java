@@ -129,6 +129,13 @@ public class MemberTest {
         assertFalse(member.hasReachedFineLimit());
     }
     
+    @Test
+    public void testGetFineAmount() {
+        float expResult = 0.0F;
+        float result = member.getFineAmount();
+        assertEquals(expResult, result, 0.0);
+    }
+    
     @After
     public void tearDown() {
     }
