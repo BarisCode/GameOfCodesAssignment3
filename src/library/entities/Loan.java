@@ -116,6 +116,7 @@ public class Loan implements ILoan
 		return borrower;
 	}
 
+	// Return the book object.
 	@Override
 	public IBook getBook() 
         {
