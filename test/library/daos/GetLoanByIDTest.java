@@ -24,6 +24,7 @@ import static org.junit.Assert.*;
  */
 public class GetLoanByIDTest {
     
+    // Create the required references.
     ILoanHelper helper;
     ILoanDAO dao;
     ILoan instance;
@@ -31,6 +32,7 @@ public class GetLoanByIDTest {
     IMember member;
     Date borrowDate, returnDate;
     
+    // Set up the book, member, loanMapDao object.
     @Before
     public void setUp(){
         book = new Book("Author1","ITC515","0055455",12345);
@@ -45,7 +47,8 @@ public class GetLoanByIDTest {
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
-    //
+    
+    // Test the getLoanByID() method of the LoanMapDAO class
     @Test
     public void testGetLoanByID() {
         
