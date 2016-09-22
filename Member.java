@@ -162,7 +162,7 @@ public class Member implements IMember {
 				firstName, lastName, contactPhone, emailAddress, totalFines);
 	}
 
-	private Boolean borrowingAllowed() {
+	private Boolean borrowingAllowed() { // check if a member is allowed to borrow book
 		boolean b = !hasOverDueLoans() &&
 				!hasReachedFineLimit() &&
 				!hasReachedLoanLimit();
