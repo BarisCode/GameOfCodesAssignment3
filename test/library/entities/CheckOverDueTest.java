@@ -26,7 +26,7 @@ public class CheckOverDueTest {
     IMember member;
     Date borrowDate, returnDate;
     
-    // Set up the reuired objects.
+    // Set up the required objects.
     @Before
     public void setUp() {
         book = new Book("Author1","ITC515","0055455",12345);
