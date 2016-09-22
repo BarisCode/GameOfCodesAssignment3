@@ -21,12 +21,12 @@ import library.interfaces.entities.ELoanState;
 
 public class Loan implements ILoan 
 {
-	private int id;
-	private final IMember borrower;
-	private final IBook book;
-	private Date borrowDate;
+	private int id;	// Id of the Loan
+	private final IMember borrower;	// IMember instance 
+	private final IBook book;	// IBook instance
+	private Date borrowDate;	// Borrow date and due date instances.
 	private Date dueDate;
-	private ELoanState state;
+	private ELoanState state;	// State of the Loan
 	
 	public Loan(IBook book, IMember borrower, Date borrowDate, Date returnDate) 
         {
