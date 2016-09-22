@@ -20,8 +20,7 @@ public class Member implements IMember {
 	private List<ILoan> loanList;
 	private float totalFines;
 	
-	public Member(String firstName, String lastName, String contactPhone,
-			String email, int memberID) {
+	public Member(String firstName, String lastName, String contactPhone,String email, int memberID) { // constructor to create member with first name, last name, phone number, email and member ID
 		if ( !sane(firstName, lastName, contactPhone, email, memberID)) {
 			throw new IllegalArgumentException("Member: constructor : bad parameters");
 		}
