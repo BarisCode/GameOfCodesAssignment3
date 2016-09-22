@@ -120,7 +120,7 @@ public class MemberTest {
     }
     
     @Test
-    public void testGetFineAmount() {
+    public void testGetFineAmount() { // test if testGetFineAmount produce the correct output for a member
         float expResult = 0.0F;
         float result = member.getFineAmount();
         assertEquals(expResult, result, 0.0);
