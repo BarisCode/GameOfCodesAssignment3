@@ -45,10 +45,8 @@ public class CheckOverDueTest {
     public void testCheckOverDue() {
         boolean expectedResult = false;
         
-     //   Calendar current = Calendar.getInstance();
-        System.out.println(" Sate is  "+instance.getState());
-     //   boolean result = instance.checkOverDue((Date)current.getTime());
-      //  System.out.println("  "+current.getTime());
-      //  assertEquals(expectedResult, result);
+        //System.out.println(" Sate is  "+instance.getState());
+        instance.setState(ELoanState.CURRENT);
+        assertEquals(expectedResult, instance.checkOverDue(borrowDate));
     }
 }
