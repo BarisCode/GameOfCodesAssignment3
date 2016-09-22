@@ -119,6 +119,11 @@ public class MemberTest {
         assertFalse(member.hasReachedLoanLimit());
     }
     
+    @Test
+    public void testHasFinesPayable() {
+        assertFalse(member.hasFinesPayable());
+    }
+    
     @After
     public void tearDown() {
     }
