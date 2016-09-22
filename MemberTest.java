@@ -20,7 +20,7 @@ import static org.junit.Assert.*;
  */
 public class MemberTest {
     Loan instance; // loan object
-    IBook book;
+    IBook book; // used for book object
     IMember member;
     Date borrowDate, returnDate;
     
