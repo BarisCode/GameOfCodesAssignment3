@@ -25,7 +25,7 @@ public class CreateLoanTest {
     
     IMember member;
     IBook book;
-    Loan iLoan;
+    ILoan iLoan;
     ILoanDAO loanDAO;
     
     @Before
@@ -41,11 +41,13 @@ public class CreateLoanTest {
     public void testCreateLoan() {
     
         ELoanState expResult = ELoanState.PENDING;
-        ILoan loan = loanDAO.createLoan(member, book);
+        iLoan = loanDAO.createLoan(member, book);
       
-       // Loan loan = (Loan)iLoan;
-      //  ELoanState result = loan.getState();
-      //  assertEquals(expResult, result);
+        Loan loan = (Loan)iLoan;
+        ELoanState result = loan.getState();
+        
+        assertEquals(expResult, result);
+        
         System.out.println("Loan "+loan);
     }
 }
