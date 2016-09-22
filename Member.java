@@ -73,7 +73,7 @@ public class Member implements IMember {
 	}
 
 	@Override
-	public float getFineAmount() {
+	public float getFineAmount() { // retrieve the amount of fine for a member
 		return totalFines;
 	}
 
