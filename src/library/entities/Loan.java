@@ -72,6 +72,7 @@ public class Loan implements ILoan
             borrower.addLoan(this);	// Add loan into the member.
 	}
 
+	// Check the complete the loan.
 	@Override
 	public void complete() 
         {
@@ -80,7 +81,7 @@ public class Loan implements ILoan
 		throw new RuntimeException(String.format("Loan : complete : incorrect state transition  : %s -> %s\n",
 							state, ELoanState.COMPLETE));
             }
-            state = ELoanState.COMPLETE;		
+            state = ELoanState.COMPLETE;	// Assign complete state.		
 	}
 
 	@Override
