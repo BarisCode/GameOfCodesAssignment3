@@ -114,6 +114,11 @@ public class MemberTest {
         assertEquals(expResult, result);
     }
     
+    @Test
+    public void testHasReachedLoanLimit() {
+        assertFalse(member.hasReachedLoanLimit());
+    }
+    
     @After
     public void tearDown() {
     }
