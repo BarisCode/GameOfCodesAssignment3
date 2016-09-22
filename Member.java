@@ -35,8 +35,7 @@ public class Member implements IMember {
 	}
 
 	
-	private boolean sane(String firstName, String lastName, String contactPhone,
-			String emailAddress, int memberID) {
+	private boolean sane(String firstName, String lastName, String contactPhone,String emailAddress, int memberID) { // check if arguments provided to the constructor are not empty
 		return  ( firstName != null    && !firstName.isEmpty()    &&
 				  lastName != null     && !lastName.isEmpty()     &&
 				  contactPhone != null && !contactPhone.isEmpty() &&
