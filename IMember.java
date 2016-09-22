@@ -13,7 +13,7 @@ public interface IMember {
 	
 	public boolean hasReachedLoanLimit(); // interface method to check if a member has reached the book loan limit
 	
-	public boolean hasFinesPayable();
+	public boolean hasFinesPayable(); // interace method to check if there are fines that a member can pay
 	
 	public boolean hasReachedFineLimit();
 	
