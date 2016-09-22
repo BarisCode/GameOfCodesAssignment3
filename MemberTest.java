@@ -63,9 +63,8 @@ public class MemberTest {
     
     @Test
     public void testGetFirstName() { // test if the first name of a member can be obtained
-        Member instance = null;
-        String expResult = "";
-        String result = instance.getFirstName();
+        String expResult = "James";
+        String result = member.getFirstName();
         assertEquals(expResult, result);
     }
     
