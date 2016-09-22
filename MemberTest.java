@@ -78,7 +78,7 @@ public class MemberTest {
     }
     
     @Test
-    public void testGetContactPhone() {
+    public void testGetContactPhone() { // test if the phone number of a member can be obained
         Member instance = null;
         String expResult = "";
         String result = instance.getContactPhone();
