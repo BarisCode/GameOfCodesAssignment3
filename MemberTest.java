@@ -115,7 +115,7 @@ public class MemberTest {
     }
     
      @Test
-    public void testHasReachedFineLimit() {
+    public void testHasReachedFineLimit() { // test if testHasReachedFineLimit produce the correct output for a member
         assertFalse(member.hasReachedFineLimit());
     }
     
