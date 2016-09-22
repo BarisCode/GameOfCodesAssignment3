@@ -19,11 +19,13 @@ import static org.junit.Assert.*;
  */
 public class GetIDTest {
     
+    // Created the required instances.
     Loan instance;
     IBook book;
     IMember member;
     Date borrowDate, returnDate;
     
+    // Set up the required objects. 
     @Before
     public void setUp(){
         book = new Book("Author1","ITC515","0055455",12345);
@@ -36,7 +38,8 @@ public class GetIDTest {
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
-    //
+    
+    // Test if get the coorect ID of loan. 
     @Test
     public void testGetID() {
         int expectedResult = 0;
