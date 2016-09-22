@@ -169,7 +169,7 @@ public class Member implements IMember {
 		return b;
 	}
 
-	private void updateState() {
+	private void updateState() { // update the borrowing state of a member
 		if (borrowingAllowed()) {
 			state = EMemberState.BORROWING_ALLOWED;
 		}
