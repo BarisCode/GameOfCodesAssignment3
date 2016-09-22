@@ -54,7 +54,7 @@ public class MemberTest {
     }
     
     @Test
-    public void testGetState() { // output should be BORROWING_ALLOWED as it is a default in constructor for new object
+    public void testGetState() {  // output should be BORROWING_ALLOWED as it is a default in constructor for new object
         String expResult = "BORROWING_ALLOWED";
         EMemberState result = member.getState();
         System.out.println(member.getState());
