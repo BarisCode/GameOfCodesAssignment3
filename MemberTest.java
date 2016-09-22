@@ -47,7 +47,7 @@ public class MemberTest {
     }
     
     @Test
-    public void testGetMember(){
+    public void testGetMember(){ // test if the member constructor can be called and new object created
         IMember expectedResult = member;
         IMember result = instance.getBorrower();
         assertEquals(expectedResult, result);
