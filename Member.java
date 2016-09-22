@@ -120,7 +120,7 @@ public class Member implements IMember {
 
 	
 	@Override
-	public EMemberState getState() {
+	public EMemberState getState() { // obtain the borrowing state of a member
 		return state;
 	}
 
