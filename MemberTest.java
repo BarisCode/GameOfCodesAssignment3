@@ -136,6 +136,13 @@ public class MemberTest {
         assertEquals(expResult, result, 0.0);
     }
     
+    @Test
+    public void testGetLoans() {
+        List<ILoan> expResult = Collections.<ILoan>emptyList(); 
+        List<ILoan> result = member.getLoans();
+        assertEquals(expResult, result);
+    }
+    
     @After
     public void tearDown() {
     }
