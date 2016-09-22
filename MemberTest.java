@@ -110,7 +110,7 @@ public class MemberTest {
     }
     
     @Test
-    public void testHasFinesPayable() {
+    public void testHasFinesPayable() { // test if testHasFinesPayable produce the correct output for a member
         assertFalse(member.hasFinesPayable());
     }
     
