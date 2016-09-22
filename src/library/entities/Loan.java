@@ -130,6 +130,7 @@ public class Loan implements ILoan
 		return id;
 	}
         
+        // Set the state of the loan object.
 	public void setState(ELoanState state)
         {
             this.state = state;
