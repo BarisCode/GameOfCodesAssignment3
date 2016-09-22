@@ -103,7 +103,7 @@ public class MemberMapDAO implements IMemberDAO {
 		return Collections.unmodifiableList(list);
 	}
 
-	private int getNextId() {
+	private int getNextId() { // generate the next member ID
 		return nextID++;
 	}
 
