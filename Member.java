@@ -110,7 +110,7 @@ public class Member implements IMember {
 	}
 
 	@Override
-	public void removeLoan(ILoan loan) {
+	public void removeLoan(ILoan loan) { // remove a book loan by a member
 		if (loan == null || !loanList.contains(loan)) {
 			throw new RuntimeException(String.format("Member: removeLoan : loan is null or not found in loanList"));
 		}
