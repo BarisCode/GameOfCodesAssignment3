@@ -84,9 +84,8 @@ public class MemberTest {
     
     @Test
     public void testGetEmailAddress() { // test if the email address of a member can be obtained
-        Member instance = null;
-        String expResult = "";
-        String result = instance.getEmailAddress();
+        String expResult = "email@gmail.com";
+        String result = member.getEmailAddress();
         assertEquals(expResult, result);
     }
     
