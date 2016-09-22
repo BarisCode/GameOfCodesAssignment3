@@ -144,7 +144,7 @@ public class Member implements IMember {
 
 	
 	@Override
-	public String getEmailAddress() {
+	public String getEmailAddress() { // retrieve the email address of a member
 		return emailAddress;
 	}
 
