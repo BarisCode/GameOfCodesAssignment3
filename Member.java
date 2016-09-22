@@ -96,7 +96,7 @@ public class Member implements IMember {
 	}
 
 	@Override
-	public void addLoan(ILoan loan) {
+	public void addLoan(ILoan loan) { // add a loan when a member borrow a book
 		if (!borrowingAllowed()) {
 			throw new RuntimeException(String.format("Member: addLoan : illegal operation in state: %s", state));
 		}
