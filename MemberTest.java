@@ -102,7 +102,7 @@ public class MemberTest {
     }
     
     @Test
-    public void testHasOverDueLoans() {
+    public void testHasOverDueLoans() { // test if correct amount is obtained from testHasOverDueLoans method
         Member instance = null;
         boolean expResult = false;
         boolean result = instance.hasOverDueLoans();
