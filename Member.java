@@ -126,7 +126,7 @@ public class Member implements IMember {
 
 	
 	@Override
-	public String getFirstName() {
+	public String getFirstName() { // retrieve the first name of a member
 		return firstName;
 	}
 
