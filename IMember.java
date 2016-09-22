@@ -37,7 +37,7 @@ public interface IMember {
 	
 	public String  getContactPhone(); // interface method to obtain the phone number of a member
 	
-	public String  getEmailAddress();
+	public String  getEmailAddress(); // interface method to retrieve the email address of a member
 	
 	public int     getID();
 	
