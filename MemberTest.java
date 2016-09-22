@@ -24,7 +24,7 @@ import static org.junit.Assert.*;
  * @author baris
  */
 public class MemberTest {
-    Loan instance;
+    Loan instance; // loan object
     IBook book;
     IMember member;
     Date borrowDate, returnDate;
