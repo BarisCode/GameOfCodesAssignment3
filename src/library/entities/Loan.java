@@ -108,7 +108,8 @@ public class Loan implements ILoan
             
             return isOverDue(); // call the isOverDue method.
 	}
-
+	
+	// Return the borrower.
 	@Override
 	public IMember getBorrower() 
         {
