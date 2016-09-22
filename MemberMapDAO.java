@@ -37,8 +37,7 @@ public class MemberMapDAO implements IMemberDAO {
 
 	
 	@Override
-	public IMember addMember(String firstName, String lastName,
-			String contactPhone, String emailAddress) {
+	public IMember addMember(String firstName, String lastName,String contactPhone, String emailAddress) { // add a new member
 		int id = getNextId();
 		IMember mem = helper.makeMember(firstName, lastName, contactPhone, emailAddress, id);
 		memberMap.put(Integer.valueOf(id), mem);
@@ -46,7 +45,7 @@ public class MemberMapDAO implements IMemberDAO {
 	}
 
 	@Override
-	public IMember getMemberByID(int id) {
+	public IMember getMemberByID(int id) { // retrieve a member by the ID
 		if (memberMap.keySet().contains(Integer.valueOf(id))) {
 			return memberMap.get(Integer.valueOf(id));
 		}
@@ -104,7 +103,7 @@ public class MemberMapDAO implements IMemberDAO {
 		return Collections.unmodifiableList(list);
 	}
 
-	private int getNextId() {
+	private int getNextId() { // generate the next member ID
 		return nextID++;
 	}
 

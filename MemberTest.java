@@ -27,15 +27,6 @@ public class MemberTest {
     public MemberTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-        
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
     @Before
     public void setUp() {
         book = new Book("Author1","ITC515","0055455",12345); // creating a book object
@@ -63,76 +54,71 @@ public class MemberTest {
     
     @Test
     public void testGetFirstName() { // test if the first name of a member can be obtained
-        Member instance = null;
-        String expResult = "";
-        String result = instance.getFirstName();
+        String expResult = "James";
+        String result = member.getFirstName();
         assertEquals(expResult, result);
     }
     
     @Test
     public void testGetLastName() { // test if the last name of a member can be obtained
-        Member instance = null;
-        String expResult = "";
-        String result = instance.getLastName();
+        String expResult = "Mack";
+        String result = member.getLastName();
         assertEquals(expResult, result);
     }
     
     @Test
     public void testGetContactPhone() { // test if the phone number of a member can be obained
-        Member instance = null;
-        String expResult = "";
-        String result = instance.getContactPhone();
+        String expResult = "046977777";
+        String result = member.getContactPhone();
         assertEquals(expResult, result);
     }
     
     @Test
     public void testGetEmailAddress() { // test if the email address of a member can be obtained
-        Member instance = null;
-        String expResult = "";
-        String result = instance.getEmailAddress();
+        String expResult = "email@gmail.com";
+        String result = member.getEmailAddress();
         assertEquals(expResult, result);
     }
     
     @Test
     public void testGetID() { // test if the ID of a member can be obtained
-        Member instance = null;
-        int expResult = 0;
-        int result = instance.getID();
+        String expResult = "123";
+        String result = String.valueOf(member.getID());
+        assertNotNull(result);
         assertEquals(expResult, result);
     }
     
     @Test
     public void testHasOverDueLoans() { // test if correct amount is obtained from testHasOverDueLoans method
-        Member instance = null;
-        boolean expResult = false;
-        boolean result = instance.hasOverDueLoans();
-        assertEquals(expResult, result);
+        List<ILoan> list;
+        Loan loan = new Loan(book, member, borrowDate, returnDate);
+        assertFalse(member.hasOverDueLoans());
     }
     
     @Test
-    public void testHasReachedLoanLimit() {
+    public void testHasReachedLoanLimit() { // test if HasReachedLoanLimit produce the correct output for a member
         assertFalse(member.hasReachedLoanLimit());
     }
     
     @Test
-    public void testHasFinesPayable() {
+    public void testHasFinesPayable() { // test if testHasFinesPayable produce the correct output for a member
         assertFalse(member.hasFinesPayable());
     }
     
      @Test
-    public void testHasReachedFineLimit() {
+    public void testHasReachedFineLimit() { // test if testHasReachedFineLimit produce the correct output for a member
         assertFalse(member.hasReachedFineLimit());
     }
     
     @Test
-    public void testGetFineAmount() {
+    public void testGetFineAmount() { // test if testGetFineAmount produce the correct output for a member
         float expResult = 0.0F;
         float result = member.getFineAmount();
         assertEquals(expResult, result, 0.0);
     }
     
     @Test
-    public void testGetLoans() {
+    public void testGetLoans() { // test if testGetLoans output the correct list of loans for a member
         List<ILoan> expResult = Collections.<ILoan>emptyList(); 
         List<ILoan> result = member.getLoans();
         assertEquals(expResult, result);
@@ -140,6 +126,15 @@ public class MemberTest {
     
     @After
     public void tearDown() {
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+        
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
     }
 
     
