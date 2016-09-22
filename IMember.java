@@ -33,7 +33,7 @@ public interface IMember {
 	
 	public String  getFirstName(); // interface method to get the first name of a customer
 	
-	public String  getLastName();
+	public String  getLastName(); // interface method to retrieve the last name of a member
 	
 	public String  getContactPhone();
 	
