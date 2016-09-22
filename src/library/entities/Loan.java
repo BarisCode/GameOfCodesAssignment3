@@ -28,6 +28,7 @@ public class Loan implements ILoan
 	private Date dueDate;
 	private ELoanState state;	// State of the Loan
 	
+	// Create and Initialize the loan object.
 	public Loan(IBook book, IMember borrower, Date borrowDate, Date returnDate) 
         {
             if (!sane(book, borrower, borrowDate, returnDate))
