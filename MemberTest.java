@@ -127,7 +127,7 @@ public class MemberTest {
     }
     
     @Test
-    public void testGetLoans() {
+    public void testGetLoans() { // test if testGetLoans output the correct list of loans for a member
         List<ILoan> expResult = Collections.<ILoan>emptyList(); 
         List<ILoan> result = member.getLoans();
         assertEquals(expResult, result);
