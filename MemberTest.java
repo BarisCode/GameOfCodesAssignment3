@@ -105,7 +105,7 @@ public class MemberTest {
     }
     
     @Test
-    public void testHasReachedLoanLimit() {
+    public void testHasReachedLoanLimit() { // test if HasReachedLoanLimit produce the correct output for a member
         assertFalse(member.hasReachedLoanLimit());
     }
     
