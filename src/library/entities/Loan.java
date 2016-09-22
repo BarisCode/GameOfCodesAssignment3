@@ -41,7 +41,7 @@ public class Loan implements ILoan
             this.dueDate = returnDate;	
             this.state = ELoanState.PENDING;
 	}
-	
+	// Check for not null value and not same value of borrow and return date.
 	private boolean sane(IBook book, IMember borrower, Date borrowDate, Date returnDate) 
         {
 		return  ( book != null && 
@@ -51,6 +51,7 @@ public class Loan implements ILoan
 				  borrowDate.compareTo(returnDate) <= 0);
 	}
 
+	// Commit the Loan.
 	@Override
 	public void commit(int loanId) 
         {
@@ -65,10 +66,10 @@ public class Loan implements ILoan
 							loanId));
             }
             
-            this.id = loanId;
-            state = ELoanState.CURRENT;
-            book.borrow(this);
-            borrower.addLoan(this);
+            this.id = loanId;	// Assign loan id
+            state = ELoanState.CURRENT;	// assign current state to loan object.
+            book.borrow(this);	// Borrow the book.
+            borrower.addLoan(this);	// Add loan into the member.
 	}
 
 	@Override
