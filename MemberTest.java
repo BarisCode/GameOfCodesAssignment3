@@ -70,9 +70,8 @@ public class MemberTest {
     
     @Test
     public void testGetLastName() { // test if the last name of a member can be obtained
-        Member instance = null;
-        String expResult = "";
-        String result = instance.getLastName();
+        String expResult = "Mack";
+        String result = member.getLastName();
         assertEquals(expResult, result);
     }
     
