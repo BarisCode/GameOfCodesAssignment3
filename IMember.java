@@ -21,7 +21,7 @@ public interface IMember {
 	
 	public void    addFine(float fine); // interface method to add a fine to a member
 
-	public void    payFine(float payment);
+	public void    payFine(float payment); // interface method to allow a member to pay fine corresponding
 	
 	public void    addLoan(ILoan loan);
 	
