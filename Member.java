@@ -87,7 +87,7 @@ public class Member implements IMember {
 	}
 
 	@Override
-	public void payFine(float payment) {
+	public void payFine(float payment) { // allow a member to pay fine due
 		if (payment < 0 || payment > totalFines) {
 			throw new RuntimeException(String.format("Member: addFine : payment cannot be negative or greater than totalFines"));
 		}
