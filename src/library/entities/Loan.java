@@ -136,6 +136,7 @@ public class Loan implements ILoan
             this.state = state;
         }
         
+        // Return the state of the loan object.
 	public ELoanState getState() 
         {
 		return state;
