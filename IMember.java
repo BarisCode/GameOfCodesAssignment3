@@ -17,9 +17,9 @@ public interface IMember {
 	
 	public boolean hasReachedFineLimit(); // interace method to check if a member has reached the fine limit
 	
-	public float   getFineAmount(); // interface mthod to obtain the amount of fine for a member
+	public float   getFineAmount(); // interface method to obtain the amount of fine for a member
 	
-	public void    addFine(float fine);
+	public void    addFine(float fine); // interface method to add a fine to a member
 
 	public void    payFine(float payment);
 	
