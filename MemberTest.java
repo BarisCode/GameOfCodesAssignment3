@@ -124,6 +124,11 @@ public class MemberTest {
         assertFalse(member.hasFinesPayable());
     }
     
+     @Test
+    public void testHasReachedFineLimit() {
+        assertFalse(member.hasReachedFineLimit());
+    }
+    
     @After
     public void tearDown() {
     }
