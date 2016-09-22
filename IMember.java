@@ -9,7 +9,7 @@ public interface IMember {
 	public static final float FINE_LIMIT = 10.0f;	
 	
 	
-	public boolean hasOverDueLoans();
+	public boolean hasOverDueLoans(); // interface method to check if a member has book loans overdue
 	
 	public boolean hasReachedLoanLimit();
 	
