@@ -27,9 +27,9 @@ public interface IMember {
 	
 	public List<ILoan> getLoans(); // interface method to get the list of loans
 	
-	public void    removeLoan(ILoan loan);
+	public void removeLoan(ILoan loan); // interface method to remove a loan of a member
 	
-	public EMemberState   getState();
+	public EMemberState getState();
 	
 	public String  getFirstName();
 	
