@@ -20,11 +20,13 @@ import static org.junit.Assert.*;
  */
 public class CheckOverDueTest {
     
+    // Create the required instances.
     Loan instance;
     IBook book;
     IMember member;
     Date borrowDate, returnDate;
     
+    // Set up the reuired objects.
     @Before
     public void setUp() {
         book = new Book("Author1","ITC515","0055455",12345);
@@ -37,7 +39,8 @@ public class CheckOverDueTest {
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
-    //
+    
+    // Test the check overDue book.
     @Test
     public void testCheckOverDue() {
         boolean expectedResult = false;
