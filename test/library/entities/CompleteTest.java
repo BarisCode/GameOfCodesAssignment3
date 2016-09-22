@@ -19,12 +19,13 @@ import static org.junit.Assert.*;
  */
 public class CompleteTest {
     
+    // Created the required instances.
     Loan instance;
     IBook book;
     IMember member;
     Date borrowDate, returnDate;
     
-    
+    // Set up the reuired objects.
     @Before
     public void setUp() {
         book = new Book("Author1","ITC515","0055455",12345);
@@ -37,7 +38,8 @@ public class CompleteTest {
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
-    //
+    
+    // Test the complete() method.
     @Test
     public void testComplete() {
         instance.setState(ELoanState.CURRENT);
