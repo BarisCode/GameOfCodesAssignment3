@@ -132,7 +132,7 @@ public class Member implements IMember {
 
 	
 	@Override
-	public String getLastName() {
+	public String getLastName() { // retrieve the last name of a member
 		return lastName;
 	}
 
