@@ -35,7 +35,7 @@ public interface IMember {
 	
 	public String  getLastName(); // interface method to retrieve the last name of a member
 	
-	public String  getContactPhone();
+	public String  getContactPhone(); // interface method to obtain the phone number of a member
 	
 	public String  getEmailAddress();
 	
