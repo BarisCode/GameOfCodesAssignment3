@@ -105,7 +105,7 @@ public class Member implements IMember {
 	}
 
 	@Override
-	public List<ILoan> getLoans() {
+	public List<ILoan> getLoans() { // retrive the list of loans for a member
 		return Collections.unmodifiableList(loanList);
 	}
 
