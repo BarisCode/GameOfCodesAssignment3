@@ -40,6 +40,7 @@ public class CompleteTest {
     //
     @Test
     public void testComplete() {
+        instance.setState(ELoanState.CURRENT);
         instance.complete();
         ELoanState expResult = ELoanState.COMPLETE;
         ELoanState result = instance.getState();
