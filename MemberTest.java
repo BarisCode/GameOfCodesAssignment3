@@ -22,7 +22,7 @@ public class MemberTest {
     Loan instance; // loan object
     IBook book; // used for book object
     IMember member; // used for member object
-    Date borrowDate, returnDate;
+    Date borrowDate, returnDate; // used to create new dates
     
     public MemberTest() {
     }
