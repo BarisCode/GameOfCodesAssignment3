@@ -142,6 +142,7 @@ public class Loan implements ILoan
 		return state;
 	}
 
+	// Return string contains full details of the Loan.
 	@Override
 	public String toString() 
         {
