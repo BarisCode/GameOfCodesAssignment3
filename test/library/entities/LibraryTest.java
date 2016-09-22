@@ -13,7 +13,11 @@ import org.junit.runners.Suite;
  *
  * @author Nikul
  */
+
+// Run with suite class
 @RunWith(Suite.class)
+
+// All entities are added to test Library project.
 @Suite.SuiteClasses({library.entities.MemberTest.class, library.entities.LoanTest.class})
 public class LibraryTest {
 
