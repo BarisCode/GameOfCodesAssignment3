@@ -67,7 +67,7 @@ public class Member implements IMember {
 	}
 
 	@Override
-	public boolean hasReachedFineLimit() {
+	public boolean hasReachedFineLimit() { // check if a member has reached the fine limit
 		boolean b = totalFines >= IMember.FINE_LIMIT;
 		return b;
 	}
