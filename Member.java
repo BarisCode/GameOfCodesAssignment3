@@ -150,7 +150,7 @@ public class Member implements IMember {
 
 	
 	@Override
-	public int getID() {
+	public int getID() { // retrieve the ID of a member
 		return id;
 	}
 
