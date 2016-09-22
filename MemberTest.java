@@ -94,7 +94,7 @@ public class MemberTest {
     }
     
     @Test
-    public void testGetID() {
+    public void testGetID() { // test if the ID of a member can be obtained
         Member instance = null;
         int expResult = 0;
         int result = instance.getID();
