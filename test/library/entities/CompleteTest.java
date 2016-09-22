@@ -6,6 +6,7 @@
 package library.entities;
 
 import java.util.Date;
+import library.interfaces.entities.ELoanState;
 import library.interfaces.entities.IBook;
 import library.interfaces.entities.IMember;
 import org.junit.Before;
@@ -39,5 +40,10 @@ public class CompleteTest {
     //
     @Test
     public void testComplete() {
+        instance.complete();
+        ELoanState expResult = ELoanState.COMPLETE;
+        ELoanState result = instance.getState();
+        
+        assertEquals(expResult, result);
     }
 }
