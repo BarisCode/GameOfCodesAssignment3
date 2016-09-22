@@ -43,7 +43,7 @@ public class MemberTest {
         borrowDate = new Date(2016,05,10);
         returnDate = new Date(2016, 07, 10);
         
-        instance = new Loan(book, member, borrowDate, returnDate);
+        instance = new Loan(book, member, borrowDate, returnDate); // a loan object
     }
     
     @Test
