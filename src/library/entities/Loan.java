@@ -123,6 +123,7 @@ public class Loan implements ILoan
 		return book;
 	}
 
+	// Return the loan ID.
 	@Override
 	public int getID() 
         {
