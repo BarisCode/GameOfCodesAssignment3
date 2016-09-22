@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package library.entities.loan;
+package library.entities;
 
 /**
  *
@@ -121,7 +121,12 @@ public class Loan implements ILoan
         {
 		return id;
 	}
-	
+        
+	public void setState(ELoanState state)
+        {
+            this.state = state;
+        }
+        
 	public ELoanState getState() 
         {
 		return state;
