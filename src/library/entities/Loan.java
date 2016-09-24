@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package library.entities.loan;
+package library.entities;
 
 /**
  *
@@ -21,13 +21,14 @@ import library.interfaces.entities.ELoanState;
 
 public class Loan implements ILoan 
 {
-	private int id;
-	private final IMember borrower;
-	private final IBook book;
-	private Date borrowDate;
+	private int id;	// Id of the Loan
+	private final IMember borrower;	// IMember instance 
+	private final IBook book;	// IBook instance
+	private Date borrowDate;	// Borrow date and due date instances.
 	private Date dueDate;
-	private ELoanState state;
+	private ELoanState state;	// State of the Loan
 	
+	// Create and Initialize the loan object.
 	public Loan(IBook book, IMember borrower, Date borrowDate, Date returnDate) 
         {
             if (!sane(book, borrower, borrowDate, returnDate))
@@ -40,7 +41,7 @@ public class Loan implements ILoan
             this.dueDate = returnDate;	
             this.state = ELoanState.PENDING;
 	}
-	
+	// Check for not null value and not same value of borrow and return date.
 	private boolean sane(IBook book, IMember borrower, Date borrowDate, Date returnDate) 
         {
 		return  ( book != null && 
@@ -50,6 +51,7 @@ public class Loan implements ILoan
 				  borrowDate.compareTo(returnDate) <= 0);
 	}
 
+	// Commit the Loan.
 	@Override
 	public void commit(int loanId) 
         {
@@ -64,12 +66,13 @@ public class Loan implements ILoan
 							loanId));
             }
             
-            this.id = loanId;
-            state = ELoanState.CURRENT;
-            book.borrow(this);
-            borrower.addLoan(this);
+            this.id = loanId;	// Assign loan id
+            state = ELoanState.CURRENT;	// assign current state to loan object.
+            book.borrow(this);	// Borrow the book.
+            borrower.addLoan(this);	// Add loan into the member.
 	}
 
+	// Check the complete the loan.
 	@Override
 	public void complete() 
         {
@@ -78,19 +81,21 @@ public class Loan implements ILoan
 		throw new RuntimeException(String.format("Loan : complete : incorrect state transition  : %s -> %s\n",
 							state, ELoanState.COMPLETE));
             }
-            state = ELoanState.COMPLETE;		
+            state = ELoanState.COMPLETE;	// Assign complete state.		
 	}
 
+	// Return true if loan is over due.
 	@Override
 	public boolean isOverDue() 
         {
             return (state == ELoanState.OVERDUE);
 	}
 
+	// Check the loan is over due.
 	@Override
 	public boolean checkOverDue(Date currentDate) 
         {
-            if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE )) 
+            if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE )) // Incorrect transition.
             {
 		throw new RuntimeException(String.format("Loan : checkOverDue : incorrect state transition  : %s -> %s\n",
 							state, ELoanState.OVERDUE));
@@ -101,32 +106,43 @@ public class Loan implements ILoan
 		state = ELoanState.OVERDUE;
             }
             
-            return isOverDue();
+            return isOverDue(); // call the isOverDue method.
 	}
-
+	
+	// Return the borrower.
 	@Override
 	public IMember getBorrower() 
         {
 		return borrower;
 	}
 
+	// Return the book object.
 	@Override
 	public IBook getBook() 
         {
 		return book;
 	}
 
+	// Return the loan ID.
 	@Override
 	public int getID() 
         {
 		return id;
 	}
-	
+        
+        // Set the state of the loan object.
+	public void setState(ELoanState state)
+        {
+            this.state = state;
+        }
+        
+        // Return the state of the loan object.
 	public ELoanState getState() 
         {
 		return state;
 	}
 
+	// Return string contains full details of the Loan.
 	@Override
 	public String toString() 
         {

@@ -18,11 +18,14 @@ import static org.junit.Assert.*;
  * @author Nikul
  */
 public class GetBookTest {
+    
+    // Created the required instances.
     Loan instance;
     IBook book;
     IMember member;
     Date borrowDate, returnDate;
     
+    // Set up the requied the objects.
     @Before
     public void setUp() {
         book = new Book("Author1","ITC515","0055455",12345);
@@ -35,7 +38,8 @@ public class GetBookTest {
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
-    //
+    
+    // Test the getBook() method.
     @Test
     public void testGetBook(){
         IBook expectedResult = book;
